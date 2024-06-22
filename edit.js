@@ -36,8 +36,11 @@ function homeLink() {
 // Function to display contact details on the page
 function displayOutput(data) {
   let avatarImg = `
-  <img src="${rootPath}/controller/uploads/${data[0].avatar}" width="200" />
-  `;
+  <div class="col-lg-5 mx-auto row">
+  <img class="rounded-circle img-fluid" width="100"
+      height="100" src="${rootPath}/controller/uploads/${data[0].avatar}" width="200" />
+  </div>
+      `;
   document.getElementById("avatarImage").innerHTML = avatarImg;
   document.getElementById("firstname").value = data[0].firstname;
   document.getElementById("lastname").value = data[0].lastname;

@@ -10,6 +10,7 @@ function fetchContacts() {
     })
     .then(function (data) {
       displayOutput(data);
+      console.log(data);
     });
 }
 
@@ -18,11 +19,17 @@ function displayOutput(data) {
   let output = "<table>";
   for (i in data) {
     output += `
-              <tr onclick="editContact(${data[i].id})">
-                <td><img src="${rootPath}controller/uploads/${data[i].avatar}" width="40"/></td>
-                  <td><h5>${data[i].firstname}</h5></td>
-                  <td><h5>${data[i].lastname}</h5></td>
-              </tr>
+              <div class="col" onclick="editContact(${data[i].id})">
+              <div class="card contact">
+                <img class="card-img-top img-fluid rounded" src="${rootPath}controller/uploads/${data[i].avatar}" />
+                <div class="card-body">
+                <h5 class="card-title">${data[i].firstname}</h5>
+                <h5 class="card-title">${data[i].lastname}</h5>
+                <p class="card-text">Contact entry: ${data[i].firstname} ${data[i].lastname} can be contacted at <br />
+                 <i>${data[i].mobile}</i> or <i>${data[i].email}</i></p>
+                </div> 
+                </div> 
+              </div>
 `;
   }
 
