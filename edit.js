@@ -36,7 +36,7 @@ function homeLink() {
 // Function to display contact details on the page
 function displayOutput(data) {
   let avatarImg = `
-  <div class="col-lg-5 mx-auto row">
+  <div class="col-lg-5 mx-auto my-3 row">
   <img class="rounded-circle img-fluid" width="100"
       height="100" src="${rootPath}/controller/uploads/${data[0].avatar}" width="200" />
   </div>
@@ -86,7 +86,7 @@ function submitForm(e) {
 
 // Function to handle contact deletion
 function deleteContact() {
-  const confirmDelete = confirm("Delete contact. Are you sure?");
+  const confirmDelete = confirm("Delete Contact. Are you sure?");
 
   if (confirmDelete) {
     fetch(rootPath + "controller/delete-contact/?id=" + id)

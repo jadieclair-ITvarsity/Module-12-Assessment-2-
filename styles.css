@@ -1,11 +1,15 @@
-/* index.html */
-
 body {
   background-color: #211a1a !important;
 }
 
-h1 {
+h2 {
   color: #1a5371 !important;
+  font-weight: bolder;
+}
+
+.title {
+  color: #1a5371 !important;
+  text-shadow: 2px 2px 5px #0c0c0c;
 }
 
 button:hover {
